@@ -1,18 +1,18 @@
 <template>
 <div>
   <Header/>
-  <ShoppingCart/>
+  <Login/>
 </div>
   
 </template>
 <script>
 import Header from './components/Header.vue';
-import ShoppingCart from './views/ShoppingCart.vue';
+import Login from './views/Login.vue';
 
 export default {
   name:'App',
   components:{
-    Header,ShoppingCart
+    Header,Login
   }
 }
 </script>

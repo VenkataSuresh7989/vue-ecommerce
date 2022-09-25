@@ -30,21 +30,23 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
 export default {
     name:'ShoppingCart_component',
     data(){
         return {
-            products:[
-                {id:1,productName:"iPhone",price:1000,quantity:0},
-                {id:2,productName:"sony",price:2000,quantity:0},
-                {id:3,productName:"samsung",price:3000,quantity:0},
-                {id:4,productName:"iPad",price:4000,quantity:0},
-                {id:5,productName:"Dell",price:5000,quantity:0},
-                {id:6,productName:"HP",price:6000,quantity:0},
-            ]
+            products:[]
         }
     },
+    mounted(){
+        this.getProductInfo();
+    },
     methods:{
+        getProductInfo: function(){
+            axios.get(axios.defaults.serviceURL + "/products").then(res => {
+                this.products=(res.status==200 && res.data != undefined)?res.data:{};
+            });
+        },
         onIncrement: function(idx,maxVal){
             if(this.products[idx].quantity < maxVal)
                 this.products[idx].quantity += 1; 
@@ -60,6 +62,6 @@ export default {
                 this.products=allProducts;
             } 
         }
-    }
+    },
 }
 </script>
