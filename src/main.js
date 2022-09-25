@@ -16,8 +16,8 @@ import 'jquery';
 import 'popper.js/dist/umd/popper';
 
 /* Bootstrap Integration */
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
 
 Vue.config.productionTip = false
 

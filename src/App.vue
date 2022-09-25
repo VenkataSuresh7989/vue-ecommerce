@@ -2,19 +2,30 @@
 <div>
   <Header/>
   <div >
-    <router-view v-if="$store.state.isLogin"/>
-    <Login v-else/>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3" v-if="$store.state.isLogin">
+          <Sidebar/>
+        </div>
+        <div class="col-lg-9">
+          <router-view v-if="$store.state.isLogin"/>
+          <Login v-else/>
+        </div>
+      </div>
+    </div>    
   </div>
 </div>
   
 </template>
 <script>
 import Header from './components/Header.vue';
+import Sidebar from './views/Sidebar.vue';
 import Login from './views/Login.vue';
+
 export default {  
   name:'App',
   components:{
-    Header,Login
+    Header,Sidebar,Login
   }
 }
 </script>
