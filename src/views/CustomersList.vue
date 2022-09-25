@@ -1,12 +1,19 @@
 <template>
     <div>
-        <h4 class="border-bottom m-1 p-1">
-            {{pageTitle}}
-            <span class="btn btn-secondary badge badge-light m-2">
-                {{customersCount}}
-            </span>
-            <button class="btn btn-info" v-on:click="onRefreshClick()">Refresh</button>
-        </h4>
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="border-bottom m-1 p-1">{{pageTitle}}
+                    <span class="btn btn-secondary badge badge-light m-2">
+                        {{customersCount}}
+                    </span>
+                    <button class="btn btn-info" v-on:click="onRefreshClick()">Refresh</button>
+                    <a class="nav-link active" aria-current="page"  href="/new_customer">
+                        <button  class="btn btn-primary">New Customer</button>
+                    </a>
+                </h4>
+            </div>
+            
+        </div>
 
         <table class="table">
             <thead>
@@ -36,19 +43,18 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
 export default {
     name:'CustomersList_component',
     data(){
         return {
             pageTitle:"Customers",
             customersCount:5,
-            customers:[
-                {id:1,name:'Suresh',phone:'123',address:{city : 'Vizag'},photo:"http://picsum.photos/id/1010/60"},
-                {id:2,name:'venkat',phone:'456',address:{city : 'HYD'},photo:"http://picsum.photos/id/1020/60"},
-                {id:3,name:'Gopi',phone:'',address:{city : 'BZA'},photo:"http://picsum.photos/id/1040/60"},
-                {id:4,name:'Hari',phone:'159',address:{city : 'CHE'},photo:"http://picsum.photos/id/1050/60"},
-                {id:5,name:'prasanth',phone:'357',address:{city : 'KKD'},photo:"http://picsum.photos/id/1060/60"},
-            ],       }
+            customers:[],       
+        }
+    },
+    mounted(){
+        this.getProductInfo();
     },
     methods:{
         onRefreshClick: function(){
@@ -58,6 +64,12 @@ export default {
         onChangePic: function(index){
             var custArr = this.customers;
             custArr[index].photo = "http://picsum.photos/id/104/60";
+        },
+        getProductInfo: function(){
+            axios.get(axios.defaults.serviceURL + "/customers").then(res => {
+                this.customers=(res.status==200 && res.data != undefined)?res.data: [];
+                console.log("this.customers",this.customers);
+            });
         },
     },
 }

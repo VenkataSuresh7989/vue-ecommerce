@@ -1,14 +1,108 @@
 {
-    "products":[
-        {"id":1,"productName":"iPhone","price":1000,"quantity":0},
-        {"id":2,"productName":"sony","price":2000,"quantity":0},
-        {"id":3,"productName":"samsung","price":3000,"quantity":0},
-        {"id":4,"productName":"iPad","price":4000,"quantity":0},
-        {"id":5,"productName":"Dell","price":5000,"quantity":0},
-        {"id":6,"productName":"HP","price":6000,"quantity":0}
-    ],
-    "users":[
-        {"id":1,"email":"suresh@gmail.com","password":"798958"},
-        {"id":2,"email":"venkat@gmail.com","password":"95420"}
-    ]
+  "products": [
+    {
+      "id": 1,
+      "productName": "iPhone",
+      "price": 1000,
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "productName": "sony",
+      "price": 2000,
+      "quantity": 0
+    },
+    {
+      "id": 3,
+      "productName": "samsung",
+      "price": 3000,
+      "quantity": 0
+    },
+    {
+      "id": 4,
+      "productName": "iPad",
+      "price": 4000,
+      "quantity": 0
+    },
+    {
+      "id": 5,
+      "productName": "Dell",
+      "price": 5000,
+      "quantity": 0
+    },
+    {
+      "id": 6,
+      "productName": "HP",
+      "price": 6000,
+      "quantity": 0
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "suresh@gmail.com",
+      "password": "798958"
+    },
+    {
+      "id": 2,
+      "email": "venkat@gmail.com",
+      "password": "95420"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Suresh",
+      "phone": "123",
+      "address": {
+        "city": "Vizag"
+      },
+      "photo": "http://picsum.photos/id/1010/60"
+    },
+    {
+      "id": 2,
+      "name": "venkat",
+      "phone": "456",
+      "address": {
+        "city": "HYD"
+      },
+      "photo": "http://picsum.photos/id/1020/60"
+    },
+    {
+      "id": 3,
+      "name": "Gopi",
+      "phone": "789",
+      "address": {
+        "city": "BZA"
+      },
+      "photo": "http://picsum.photos/id/1040/60"
+    },
+    {
+      "id": 4,
+      "name": "Hari",
+      "phone": "159",
+      "address": {
+        "city": "CHE"
+      },
+      "photo": "http://picsum.photos/id/1050/60"
+    },
+    {
+      "id": 5,
+      "name": "prasanth",
+      "phone": "357",
+      "address": {
+        "city": "KKD"
+      },
+      "photo": "http://picsum.photos/id/1060/60"
+    },
+    {
+      "name": "Venkat A Suresh",
+      "address": {
+        "city": "Vizag"
+      },
+      "phone": "7989586850",
+      "photo": "http://picsum.photos/id/1070/60",
+      "id": 6
+    }
+  ]
 }

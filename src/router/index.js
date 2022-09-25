@@ -5,6 +5,8 @@ import Dashboard from '../views/Dashboard.vue';
 import CustomersList from '../views/CustomersList';
 import ShoppingCart from '../views/ShoppingCart';
 import PageNotFound from '../views/NoMatchPage';
+import ProductById from '../views/ProductById';
+import NewCustomer from '../views/InsertCustomer';
 
 Vue.use(VueRouter)
 
@@ -28,6 +30,16 @@ const routes = [
     path: '/cart',
     name: 'ShoppingCart',
     component: ShoppingCart
+  },
+  {
+    path: '/product/:id',
+    name: 'ProductById',
+    component: ProductById
+  },
+  {
+    path: '/new_customer',
+    name: 'InsertCustomer',
+    component: NewCustomer
   },
   {
     path: '*',

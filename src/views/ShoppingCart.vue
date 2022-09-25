@@ -20,6 +20,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6" style="text-align:end">
+                            <router-link :to="`/product/${index + 1}`">Details</router-link>
                             <button  class="btn btn-primary">Buy Now</button>
                         </div>
                     </div>
