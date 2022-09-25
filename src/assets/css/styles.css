@@ -1,0 +1,9 @@
+/* Navbar Background Color*/
+.navbar-style{
+    background-color: rgb(20, 20, 75) !important;
+}
+.nav-link.active{
+	border-bottom:2px solid rgb(255, 255, 255);
+}
+
+.isPhone{ background-color: yellow !important; text-align: center;}
