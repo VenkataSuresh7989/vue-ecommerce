@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid isLogin">
         <div class="col-lg-3">
             <h4 class="m-1 p-2 border-bottom">Login</h4>
             <div class="form-group form-row">
@@ -32,10 +32,13 @@ export default {
         async isLogin(){
             var response = await fetch(axios.defaults.serviceURL + `/users?email=${this.email}&password=${this.password}`,{ method: "GET" });
             var body = await response.json();
-            console.log(JSON.stringify(body));
 
             if (body.length > 0){
                 this.message = "Successfully Logged-in.";
+                localStorage.setItem("user",body[0].email);
+                this.$store.state.userName = localStorage.getItem("user");
+                this.$router.push("/");
+                window.location.reload();
             }                 
             else
                 this.message = "Invalid login, please try again";

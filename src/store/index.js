@@ -10,7 +10,8 @@ axios.defaults.serviceURL = 'http://localhost:3000';
 
 export default new Vuex.Store({
   state: {
-    
+    isLogin: (localStorage.getItem("user") == ""|| localStorage.getItem("user") == null) ? false : true,
+    userName:localStorage.getItem("user"),
   },
   getters: {
   },
@@ -21,3 +22,5 @@ export default new Vuex.Store({
   modules: {
   }
 })
+
+

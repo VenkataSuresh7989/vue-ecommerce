@@ -1,6 +1,9 @@
 /* Navbar Background Color*/
 .navbar-style{ background-color: rgb(20, 20, 75) !important; }
 .nav-link.active{ border-bottom:2px solid rgb(255, 255, 255); }
+.nav_content{position:absolute; top:0; right:0;}
 
 .isPhone{ background-color: yellow !important; text-align: center; }
 .close_icon{ float: right; }
+.admin{color: rgb(248, 68, 96);font-weight: bold;font-size: 30px !important;font-family: Georgia;}
+.isLogin{display: flex;align-items: center;justify-content: center;}
