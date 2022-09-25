@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.1",
+    "boxicons": "^2.1.4",
     "core-js": "^3.8.3",
     "jquery": "^3.6.1",
     "popper.js": "^1.16.1",

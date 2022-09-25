@@ -3,6 +3,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+/* Icons */
+import 'boxicons';
+
 /* Custom Styles */
 import './assets/css/styles.css';
 
