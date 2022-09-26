@@ -7,6 +7,7 @@ import ShoppingCart from '../views/ShoppingCart';
 import PageNotFound from '../views/NoMatchPage';
 import ProductById from '../views/ProductById';
 import NewCustomer from '../views/InsertCustomer';
+import UpdateCustomer from '../views/UpdateCustomer';
 
 Vue.use(VueRouter)
 
@@ -40,6 +41,11 @@ const routes = [
     path: '/new_customer',
     name: 'InsertCustomer',
     component: NewCustomer
+  },
+  {
+    path: '/updated_customer/:id',
+    name: 'UpdateCustomer',
+    component: UpdateCustomer
   },
   {
     path: '*',

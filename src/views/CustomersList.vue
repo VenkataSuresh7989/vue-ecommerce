@@ -23,6 +23,7 @@
                     <th>Customer Name</th>
                     <th>Phone</th>
                     <th>Address</th>
+                    <th>Options</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +38,10 @@
                     <td>{{cust.name}}</td>
                     <td :class="(cust.phone == '') ? 'isPhone':''">{{(cust.phone == "") ? ("No Phone") : (cust.phone)}}</td>
                     <td>{{cust.address.city}}</td>
+                    <td>
+                        <button class="btn btn-secondary isAnchor"><router-link :to="`/updated_customer/${index + 1}`" >Update</router-link></button>
+                        <button class="btn btn-danger" v-on:click="isDelete(cust.id)">Delete</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -71,6 +76,20 @@ export default {
                 console.log("this.customers",this.customers);
             });
         },
+        async isDelete(id){
+            if(window.confirm("Are you sure to delete this customer?")){
+                var res = await fetch(axios.defaults.serviceURL + `/customers/${id}`,{
+                    method:"DELETE"
+                })
+
+                if(res.ok){
+                    var allCustomers = [...this.customers];
+                    this.customers = allCustomers = allCustomers.filter((cust)=>{
+                        return cust.id != id;
+                    })
+                }
+            }
+        }
     },
 }
 </script>

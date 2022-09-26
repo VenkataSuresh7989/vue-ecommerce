@@ -7,3 +7,4 @@
 .close_icon{ float: right; }
 .admin{color: rgb(248, 68, 96);font-weight: bold;font-size: 30px !important;font-family: Georgia;}
 .isLogin{display: flex;align-items: center;justify-content: center;}
+.isAnchor{color: #fff;text-decoration: none;}

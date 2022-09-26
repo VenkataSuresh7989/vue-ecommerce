@@ -51,57 +51,57 @@
   ],
   "customers": [
     {
-      "id": 1,
-      "name": "Suresh",
-      "phone": "123",
-      "address": {
-        "city": "Vizag"
-      },
-      "photo": "http://picsum.photos/id/1010/60"
-    },
-    {
-      "id": 2,
       "name": "venkat",
+      "address": {
+        "city": "vizag"
+      },
+      "phone": "123",
+      "photo": "https://picsum.photos/id/1010/60",
+      "id": 1
+    },
+    {
+      "name": "suresh",
+      "address": {
+        "city": "Srikakulam"
+      },
       "phone": "456",
-      "address": {
-        "city": "HYD"
-      },
-      "photo": "http://picsum.photos/id/1020/60"
-    },
-    {
-      "id": 3,
-      "name": "Gopi",
-      "phone": "789",
-      "address": {
-        "city": "BZA"
-      },
-      "photo": "http://picsum.photos/id/1040/60"
-    },
-    {
-      "id": 4,
-      "name": "Hari",
-      "phone": "159",
-      "address": {
-        "city": "CHE"
-      },
-      "photo": "http://picsum.photos/id/1050/60"
-    },
-    {
-      "id": 5,
-      "name": "prasanth",
-      "phone": "357",
-      "address": {
-        "city": "KKD"
-      },
-      "photo": "http://picsum.photos/id/1060/60"
+      "photo": "https://picsum.photos/id/1011/60",
+      "id": 2
     },
     {
       "name": "Venkat A Suresh",
       "address": {
-        "city": "Vizag"
+        "city": "Vijayawada"
       },
-      "phone": "7989586850",
-      "photo": "http://picsum.photos/id/1070/60",
+      "phone": "789",
+      "photo": "https://picsum.photos/id/1012/60",
+      "id": 3
+    },
+    {
+      "name": "Hari",
+      "address": {
+        "city": "Hyderabad"
+      },
+      "phone": "159",
+      "photo": "https://picsum.photos/id/1013/60",
+      "id": 4
+    },
+    {
+      "name": "Nari",
+      "address": {
+        "city": "Nandigama"
+      },
+      "phone": "753",
+      "photo": "https://picsum.photos/id/1014/60",
+      "id": 5
+    },
+    {
+      "name": "Sai",
+      "address": {
+        "city": "Secendrabad"
+      },
+      "phone": "258",
+      "photo": "https://picsum.photos/id/1015/60",
       "id": 6
     }
   ]
