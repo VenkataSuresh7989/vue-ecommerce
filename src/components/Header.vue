@@ -30,7 +30,10 @@
                         </li>
                         <li class="nav-item" v-if="!$store.state.isLogin">
                             <a class="nav-link active" aria-current="page" href="/login">Login</a>
-                        </li>                        
+                        </li>   
+                        <li class="nav-item" v-if="!$store.state.isLogin">
+                            <a class="nav-link" aria-current="page" href="/register">Register</a>
+                        </li>                      
                     </ul>
                 </div>
             </div>

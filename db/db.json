@@ -47,6 +47,11 @@
       "id": 2,
       "email": "venkat@gmail.com",
       "password": "95420"
+    },
+    {
+      "email": "venkatsuresh@gmail.com",
+      "password": "venkatsuresh",
+      "id": 3
     }
   ],
   "customers": [

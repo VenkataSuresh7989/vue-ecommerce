@@ -9,7 +9,9 @@
         </div>
         <div class="col-lg-9">
           <router-view v-if="$store.state.isLogin"/>
-          <Login v-else/>
+          <div v-else>
+            <router-view/>
+          </div>
         </div>
       </div>
     </div>    
@@ -20,12 +22,11 @@
 <script>
 import Header from './components/Header.vue';
 import Sidebar from './views/Sidebar.vue';
-import Login from './views/Login.vue';
 
 export default {  
   name:'App',
   components:{
-    Header,Sidebar,Login
+    Header,Sidebar,
   }
 }
 </script>

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Login from '../views/Login.vue';
+import Register from '../views/Registration.vue';
 import Dashboard from '../views/Dashboard.vue';
 import CustomersList from '../views/CustomersList';
 import ShoppingCart from '../views/ShoppingCart';
@@ -18,9 +19,14 @@ const routes = [
     component: Login
   },
   {
+    path: '/register',
+    name: 'Registration',
+    component: Register
+  },
+  {
     path: '/',
     name: 'Dashboard',
-    component: Dashboard
+    component: Dashboard,
   },
   {
     path: '/customers_list',

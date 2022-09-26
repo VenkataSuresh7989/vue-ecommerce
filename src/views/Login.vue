@@ -11,7 +11,7 @@
                 <input type="password" v-model="password" class="form-control" />
             </div>
             <div>            
-                <button class="btn btn-primary mt-2" v-on:click="isLogin">Login</button>
+                <button class="btn btn-secondary mt-2" v-on:click="isLogin">Login</button>
                 <span style="padding-left:15px" v-bind:class="(this.message!='' && this.message=='Successfully Logged-in.')?'text-success':'text-danger'">{{this.message}}</span>
             </div>
         </div>
@@ -23,8 +23,8 @@ export default {
     name: 'Login_component',
     data(){
         return {
-            email:"suresh@gmail.com",
-            password:"798958",
+            email:"",
+            password:"",
             message:"",
         }
     },
